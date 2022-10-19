@@ -38,5 +38,4 @@ namespace Gasy
         char operatera[](isa_natoraly i_);
     };
 } // namespace Gasy
-
 #endif // LAHARANTENY
