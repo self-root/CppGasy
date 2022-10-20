@@ -38,5 +38,4 @@ namespace Gasy
         tsy_miova teny operatera[](tsy_miova isa_natoraly i_) tsy_miova;
     };
 } // namespace Gasy
-
 #endif // LAHARANTENY
