@@ -72,3 +72,11 @@ TEST_CASE("Addition operatror", "[oparator+]")
     REQUIRE(str4 == "C++ is easy!");
     REQUIRE(str4.ny_halavany() == strlen("C++ is easy!"));
 }
+
+TEST_CASE("Array subscripting operator", "[array_subscripting]")
+{
+    Gasy::laharan_teny str("C++");
+    REQUIRE(str[-1] == 0);
+    REQUIRE(str[8] == 0);
+    REQUIRE(str[0] == 'C');
+}

@@ -25,7 +25,8 @@ namespace Gasy
 
         habeany new_l = strlen(t);
         _str = vaovao teny[new_l + 1]();
-        strncpy(_str, t, new_l);
+        mempcpy(_str, t, strlen(t));
+        //strncpy(_str, t, new_l);
         _size = new_l;
         avereno *izy_ihany;
     }
@@ -33,14 +34,14 @@ namespace Gasy
     laharan_teny &laharan_teny::operatera = (tsy_miova laharan_teny & l_)
     {
         operatera=(l_.cstr());
-        return *izy_ihany;
+        avereno *izy_ihany;
     }
 
     laharan_teny laharan_teny::operatera + (tsy_miova teny * t_)
     {
         habeany n_size = _size + strlen(t_);
-        teny *buf = new teny[n_size + 1];
-        memcpy(buf, _str, _size);
+        teny *buf = new teny[n_size + 1]();
+        memcpy(buf, _str, strlen(t_));
         strcat(buf, t_);
 
         avereno laharan_teny(buf);
@@ -65,11 +66,11 @@ namespace Gasy
 
     laharan_teny &laharan_teny::operatera += (tsy_miova laharan_teny & l_)
     {
-        return operatera += (l_.cstr());
+        avereno operatera += (l_.cstr());
     }
 
     eny_na_tsia laharan_teny::operatera == (tsy_miova teny * t_1) const
-    {
+    { 
         avereno(strcmp(_str, t_1) == 0 && _size == strlen(t_1));
     }
 
@@ -88,10 +89,12 @@ namespace Gasy
         avereno !(t_1 mitovy _str);
     }
 
-    char laharan_teny::operatera[](isa_natoraly i_)
+    tsy_miova teny laharan_teny::operatera[](tsy_miova isa_natoraly i_) tsy_miova
     {
-        // todo: implement
-        return '?';
+        if (i_ < 0 || i_ >= _size)
+            avereno 0;
+        tsy_miova teny c = _str[i_];
+        avereno c;
     }
 
     foana laharan_teny::adikao_mitovy(tsy_miova teny *t_)
@@ -101,7 +104,9 @@ namespace Gasy
             reset();
             _size = strlen(t_);
             _str = vaovao teny[_size + 1]();
-            strncpy(_str, t_, _size);
+            //strncpy(_str, t_, _size);
+            mempcpy(_str, t_, strlen(t_));
+            _str[_size+1] = '\0';
         }
     }
 
@@ -128,7 +133,7 @@ namespace Gasy
     std::ostream &operatera << (std::ostream & out, const laharan_teny &l_)
     {
         out << l_._str;
-        return out;
+        avereno out;
     }
 
     laharan_teny::~laharan_teny()

@@ -30,12 +30,12 @@ namespace Gasy
         laharan_teny operatera + (tsy_miova teny * t_);
         laharan_teny &operatera += (tsy_miova laharan_teny & l_);
         laharan_teny &operatera += (tsy_miova teny * t_);
-        eny_na_tsia operatera == (tsy_miova teny * t_1) const;
-        eny_na_tsia operatera == (tsy_miova laharan_teny & t_1) const;
-        eny_na_tsia operatera != (tsy_miova laharan_teny & t_1) const;
-        eny_na_tsia operatera != (tsy_miova teny * t_1) const;
-        namana std::ostream &operatera << (std::ostream & out, const laharan_teny &l_);
-        char operatera[](isa_natoraly i_);
+        eny_na_tsia operatera == (tsy_miova teny * t_1) tsy_miova;
+        eny_na_tsia operatera == (tsy_miova laharan_teny & t_1) tsy_miova;
+        eny_na_tsia operatera != (tsy_miova laharan_teny & t_1) tsy_miova;
+        eny_na_tsia operatera != (tsy_miova teny * t_1) tsy_miova;
+        namana std::ostream &operatera << (std::ostream & out, tsy_miova laharan_teny &l_);
+        tsy_miova teny operatera[](tsy_miova isa_natoraly i_) tsy_miova;
     };
 } // namespace Gasy
 
